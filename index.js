@@ -8,8 +8,8 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.use("/", userRoutes);
-app.use("/", workoutRoutes);
+app.use("/users", userRoutes);
+app.use("/workouts", workoutRoutes);
 
 mongoose.connect(process.env.MONGODB_STRING);
 

@@ -80,10 +80,7 @@ module.exports.deleteWorkout = async (req, res, next) => {
                 .send({ error: "Workout not found or user not authorized to delete." });
         }
 
-        return res.status(200).send({
-            message: "Workout deleted successfully",
-            workout: deletedWorkout,
-        });
+        return res.status(200).send({ message: "Workout deleted successfully" });
     } catch (err) {
         next(err);
     }
